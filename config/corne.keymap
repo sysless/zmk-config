@@ -16,6 +16,17 @@
 #define NAV 4
 
 / {
+      macros {
+        caps: caps {
+          compatible = "zmk,behavior-macro";
+          label = "caps_macro";
+          #binding-cells = <0>;
+          wait-ms = <0>;
+          tap-ms = <200>;
+          bindings = <&kp CAPS>;
+        };
+      };
+
       behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -40,7 +51,7 @@
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp CAPSLOCK>, <&tog CAPSLOCK>;
+            bindings = <&caps>, <&tog CAPSLOCK>;
         };
       };
 
