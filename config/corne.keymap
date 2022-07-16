@@ -10,9 +10,10 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-#define NUM 1
-#define SYM 2
-#define NAV 3
+#define CAPSLOCK 1
+#define NUM 2
+#define SYM 3
+#define NAV 4
 
 / {
       behaviors {
@@ -25,6 +26,22 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LSHFT>, <&tog CAPSLOCK>;
+        };
+
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_1";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp CAPSLOCK>, <&tog CAPSLOCK>;
+        };
       };
 
         keymap {
@@ -34,8 +51,17 @@
                         bindings = <
    &kp ESC   &kp Q       &kp W      &kp E      &kp R       &kp T   &kp Y &kp U       &kp I      &kp O      &kp P          &kp BSPC
    &kp GRAVE &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHFT F &kp G   &kp H &hm RSHFT J &hm RGUI K &hm RALT L &hm RCTRL SEMI &kp SQT
-   &kp LSHFT &kp Z       &kp X      &kp C      &kp V       &kp B   &kp N &kp M       &kp COMMA  &kp DOT    &kp FSLH       &kp RCTRL
+   &td0      &kp Z       &kp X      &kp C      &kp V       &kp B   &kp N &kp M       &kp COMMA  &kp DOT    &kp FSLH       &kp RCTRL
                               &kp LGUI &lt SYM TAB &lt NAV SPACE   &lt NUM RET &lt NUM BSPC &kp RALT
+                        >;
+                };
+
+                capslock_layer {
+                        bindings = <
+   &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
+   &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
+   &td1   &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
+                        &trans &trans &trans  &trans &trans &trans
                         >;
                 };
 
