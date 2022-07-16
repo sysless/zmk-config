@@ -21,7 +21,7 @@
           compatible = "zmk,behavior-macro";
           label = "caps_macro";
           #binding-cells = <0>;
-          wait-ms = <0>;
+          wait-ms = <100>;
           tap-ms = <200>;
           bindings = <&kp CAPS>;
         };
