@@ -60,7 +60,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        label = "Default";
+                        label = "Base";
                         bindings = <
    &kp ESC   &kp Q       &kp W      &kp E      &kp R       &kp T   &kp Y &kp U       &kp I      &kp O      &kp P          &kp BSPC
    &kp GRAVE &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHFT F &kp G   &kp H &hm RSHFT J &hm RGUI K &hm RALT L &hm RCTRL SEMI &kp SQT
@@ -70,7 +70,7 @@
                 };
 
                 CAPSLOCKED_layer {
-                        label = "Capslocked";
+                        label = "Capslock";
                         bindings = <
    &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
