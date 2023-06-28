@@ -60,6 +60,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
+                        label = "Default";
                         bindings = <
    &kp ESC   &kp Q       &kp W      &kp E      &kp R       &kp T   &kp Y &kp U       &kp I      &kp O      &kp P          &kp BSPC
    &kp GRAVE &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHFT F &kp G   &kp H &hm RSHFT J &hm RGUI K &hm RALT L &hm RCTRL SEMI &kp SQT
@@ -69,6 +70,7 @@
                 };
 
                 CAPSLOCKED_layer {
+                        label = "Capslocked";
                         bindings = <
    &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
@@ -78,6 +80,7 @@
                 };
 
                 number_layer {
+                        label = "Number";
                         bindings = <
    &trans &kp N1    &kp N2   &kp N3   &kp N4    &kp N5         &kp N6 &kp N7    &kp N8   &kp N9   &kp N0    &trans
    &trans &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &none          &none  &kp RSHFT &kp RGUI &kp RALT &kp RCTRL &trans
@@ -87,6 +90,7 @@
                 };
 
                 symbols_layer {
+                        label = "Symbols";
                         bindings = <
    &trans &kp EXCL  &kp AT   &kp HASH &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
    &trans &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &none       &kp MINUS &kp EQUAL &kp BSLH        &kp LBKT &kp RBKT &trans
@@ -96,6 +100,7 @@
                 };
 
                 nav_layer {
+                        label = "Nav";
                         bindings = <
    &trans     &kp C_BRI_DN  &kp C_BRI_UP &trans       &trans       &kp C_VOL_UP   &kp C_PP    &kp C_PREV &kp UP   &kp C_NEXT &kp PG_UP &trans
    &trans     &kp LCTRL     &kp LALT     &kp LGUI     &kp LSHFT    &kp C_VOL_DN   &kp C_MUTE  &kp LEFT   &kp DOWN &kp RIGHT  &kp PG_DN &trans
@@ -106,6 +111,7 @@
 
 
                 config_layer {
+                        label = "Config";
                         bindings = <
    &bt BT_CLR  &out OUT_USB &out OUT_BLE &trans &trans &trans  &trans &trans &trans &trans &trans &trans
    &trans      &trans       &trans       &trans &trans &trans  &trans &trans &trans &trans &trans &trans
