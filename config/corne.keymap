@@ -103,7 +103,7 @@
                 nav_layer {
                         label = "Nav";
                         bindings = <
-   &trans     &kp C_BRI_DN  &kp C_BRI_UP &kp RGB_BRI  &kp RGB_BRD  &kp C_VOL_UP   &kp C_PP    &kp C_PREV &kp UP   &kp C_NEXT &kp PG_UP &trans
+   &trans     &kp C_BRI_DN  &kp C_BRI_UP &rgb_ug RGB_BRI &rgb_ug RGB_BRD  &kp C_VOL_UP   &kp C_PP    &kp C_PREV &kp UP   &kp C_NEXT &kp PG_UP &trans
    &trans     &kp LCTRL     &kp LALT     &kp LGUI     &kp LSHFT    &kp C_VOL_DN   &kp C_MUTE  &kp LEFT   &kp DOWN &kp RIGHT  &kp PG_DN &trans
    &trans     &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp CAPS    &none      &none    &none      &none     &trans
                     	                   &trans       &trans       &trans         &lt CFG RET &trans     &trans
