@@ -10,24 +10,12 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-#define CAPSLOCKED 1
-#define NUM 2
-#define SYM 3
-#define NAV 4
-#define CFG 5
+#define NUM 1
+#define SYM 2
+#define NAV 3
+#define CFG 4
 
 / {
-      macros {
-        caps: caps {
-          compatible = "zmk,behavior-macro";
-          label = "caps_macro";
-          #binding-cells = <0>;
-          wait-ms = <100>;
-          tap-ms = <200>;
-          bindings = <&kp CAPS>;
-        };
-      };
-
       behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -38,23 +26,7 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LSHFT>, <&tog CAPSLOCKED>;
-        };
-
-        td1: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_1";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&caps>, <&tog CAPSLOCKED>;
-        };
-      };
+   };
 
         keymap {
                 compatible = "zmk,keymap";
@@ -64,18 +36,8 @@
                         bindings = <
    &kp ESC   &kp Q       &kp W      &kp E      &kp R       &kp T   &kp Y &kp U       &kp I      &kp O      &kp P          &kp BSPC
    &kp GRAVE &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHFT F &kp G   &kp H &hm RSHFT J &hm RGUI K &hm RALT L &hm RCTRL SEMI &kp SQT
-   &td0      &kp Z       &kp X      &kp C      &kp V       &kp B   &kp N &kp M       &kp COMMA  &kp DOT    &kp FSLH       &kp CAPS
+   &kp CAPS  &kp Z       &kp X      &kp C      &kp V       &kp B   &kp N &kp M       &kp COMMA  &kp DOT    &kp FSLH       &kp RCTRL
                               &kp LGUI &lt SYM TAB &lt NAV SPACE   &lt NUM RET &lt NUM BSPC &kp RALT
-                        >;
-                };
-
-                CAPSLOCKED_layer {
-                        label = "Capslock";
-                        bindings = <
-   &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-   &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-   &td1   &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-                        &trans &trans &trans  &trans &trans &trans
                         >;
                 };
 
@@ -104,7 +66,7 @@
                         bindings = <
    &trans     &kp C_BRI_DN  &kp C_BRI_UP &rgb_ug RGB_COLOR_HSB(10,100,100) &rgb_ug RGB_TOG &kp C_VOL_UP &kp C_PP &kp C_PREV &kp UP   &kp C_NEXT &kp PG_UP &trans
    &trans     &kp LCTRL     &kp LALT     &kp LGUI     &kp LSHFT    &kp C_VOL_DN   &kp C_MUTE  &kp LEFT   &kp DOWN &kp RIGHT  &kp PG_DN &trans
-   &trans     &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp CAPS    &none      &none    &none      &none     &trans
+   &trans     &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none    &none      &none    &none      &none     &trans
                     	                   &trans       &trans       &trans         &lt CFG RET &trans     &trans
                         >;
                 };
