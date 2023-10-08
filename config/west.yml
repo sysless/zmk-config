@@ -1,10 +1,10 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+    - name: sysless
+      url-base: https://github.com/sysless
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: sysless
       revision: main
       import: app/west.yml
   self:
