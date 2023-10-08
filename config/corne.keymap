@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/ext_power.h>
 
 #define DEFAULT 0
 #define NUM 1
@@ -75,7 +76,7 @@
                 config_layer {
                         label = "Config";
                         bindings = <
-   &bt BT_CLR  &out OUT_USB &out OUT_BLE &trans &trans &trans  &trans &trans &trans &trans &trans &trans
+   &bt BT_CLR  &out OUT_USB &out OUT_BLE &ext_power EP_TOG &trans &trans  &trans &trans &trans &trans &trans &trans
    &trans      &trans       &trans       &trans &trans &trans  &trans &trans &trans &trans &trans &trans
    &trans      &trans       &trans       &trans &trans &trans  &trans &trans &trans &trans &trans &trans
                                          &trans &trans &trans  &trans &trans &trans
