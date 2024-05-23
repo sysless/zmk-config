@@ -76,8 +76,8 @@
                         label = "Config";
                         bindings = <
    &bt BT_CLR  &out OUT_USB &out OUT_BLE &ext_power EP_TOG &trans &trans  &trans &trans &trans &trans &trans &trans
+   &kp LC(LA(F1))      &trans       &trans       &trans &trans &trans  &trans &trans &trans &trans &trans &trans
    &kp LC(LA(F2))      &trans       &trans       &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-   &trans      &trans       &trans       &trans &trans &trans  &trans &trans &trans &trans &trans &trans
                                          &trans &trans &trans  &trans &trans &trans
                         >;
                 };
