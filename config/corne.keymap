@@ -15,6 +15,7 @@
 #define SYM 2
 #define NAV 3
 #define CFG 4
+#define GAM 5
 
 / {
       behaviors {
@@ -75,12 +76,21 @@
                 config_layer {
                         label = "Config";
                         bindings = <
-   &bt BT_CLR  &out OUT_USB &out OUT_BLE &ext_power EP_TOG &trans &trans  &trans &trans &trans &trans &trans &trans
+   &bt BT_CLR  &out OUT_USB &out OUT_BLE &ext_power EP_TOG &trans &trans  &trans &trans &trans &trans &trans &tog GAM
    &kp LC(LA(F1))      &trans       &trans       &trans &trans &trans  &trans &trans &trans &trans &trans &trans
    &kp LC(LA(F2))      &trans       &trans       &trans &trans &trans  &trans &trans &trans &trans &trans &trans
                                          &trans &trans &trans  &trans &trans &trans
                         >;
                 };
 
+                gaming_layer {
+                        label = "Gaming";
+                        bindings = <
+   &trans  &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
+   &trans &kp A       &kp S       &kp D &kp F &trans  &trans &trans &trans &trans &trans &trans
+   &trans      &trans       &trans       &trans &trans &trans  &trans &trans &trans &trans &trans &trans
+                                         &trans &trans &trans  &trans &trans &trans
+                        >;
+                };
         };
 };
