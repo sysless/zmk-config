@@ -35,7 +35,7 @@
                 default_layer {
                         label = "Base";
                         bindings = <
-   &kp ESC   &kp Q       &kp W      &kp E      &kp R       &kp T   &kp Y &kp U       &kp I      &kp O      &kp P          &kp BSPC
+   &kp ESC   &kp Q       &kp W      &kp E      &kp R       &kp T   &kp Y &kp U       &kp I      &kp O      &kp P          &kp DELETE
    &kp GRAVE &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHFT F &kp G   &kp H &hm RSHFT J &hm RGUI K &hm RALT L &hm RCTRL SEMI &kp SQT
    &kp CAPS  &kp Z       &kp X      &kp C      &kp V       &kp B   &kp N &kp M       &kp COMMA  &kp DOT    &kp FSLH       &kp RCTRL
                               &kp LGUI &lt SYM TAB &lt NAV SPACE   &lt NUM RET &lt NUM BSPC &kp RALT
@@ -65,7 +65,7 @@
                 nav_layer {
                         label = "Nav";
                         bindings = <
-   &trans     &kp C_BRI_DN  &kp C_BRI_UP &none        &none        &kp C_VOL_UP &kp C_PP &kp C_PREV &kp UP   &kp C_NEXT &kp HOME &kp PG_UP
+   &LALT(F4)     &kp C_BRI_DN  &kp C_BRI_UP &none        &none        &kp C_VOL_UP &kp C_PP &kp C_PREV &kp UP   &kp C_NEXT &kp HOME &kp PG_UP
    &trans     &kp LCTRL     &kp LALT     &kp LGUI     &kp LSHFT    &kp C_VOL_DN   &kp C_MUTE  &kp LEFT   &kp DOWN &kp RIGHT &kp END &kp PG_DN
    &trans     &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none    &none      &none    &none      &none     &kp PRINTSCREEN
                     	                   &trans       &trans       &trans         &lt CFG RET &trans     &trans
